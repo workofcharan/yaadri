@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  background-color: #FBF6EE;
+  color: #2B2620;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #5E7A5C;
+  outline-offset: 2px;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-xl font-medium focus-ring transition-colors;
+}
+.btn-primary { @apply btn bg-sageDark text-cream hover:bg-sage; }
+.btn-secondary { @apply btn bg-white border border-sage text-sageDark hover:bg-cream; }
+.btn-danger { @apply btn bg-[#B5533C] text-cream hover:opacity-90; }
+
+.card { @apply bg-white rounded-2xl shadow-sm border border-sage/20 p-5; }
+
+.patient-text { font-size: 1.15rem; line-height: 1.6; }
